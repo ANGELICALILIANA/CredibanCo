@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_clear"
+    android:padding="@dimen/margin_layout"
+    tools:context=".ui.HistoricalFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/receiptEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_search_background_orange"
+        android:drawableStart="@drawable/baseline_filter_alt_24"
+        android:drawableLeft="@drawable/baseline_filter_alt_24"
+        android:drawablePadding="@dimen/padding"
+        android:hint="@string/filter"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:padding="@dimen/padding_filter"
+        android:textColorHint="#888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/authorizedTransactionButton"
+        style="@style/button"
+        android:layout_height="@dimen/height_buttons"
+        android:layout_marginTop="@dimen/general_margin"
+        android:text="@string/aproved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiptEditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/annulmentTransactionButton"
+        style="@style/button"
+        android:layout_height="@dimen/height_buttons"
+        android:layout_marginTop="@dimen/general_margin"
+        android:text="@string/annulment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiptEditText" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/general_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorizedTransactionButton">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historicalRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/general_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameAutocomplete" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

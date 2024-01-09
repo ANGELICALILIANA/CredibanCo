@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_layout"
+    android:background="@color/blue_clear"
+    tools:context=".ui.TransactionFragment">
+
+    <TextView
+        android:id="@+id/numberTransactionTextView"
+        style="@style/textView"
+        android:layout_marginTop="@dimen/margin_top_transaction"
+        android:text="NÚMERO DE TRANSACCIÓN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/numberTransactionEditText"
+        style="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberTransactionTextView" />
+
+    <TextView
+        android:id="@+id/codeCommerceTextView"
+        style="@style/textView"
+        android:text="@string/commerce_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberTransactionEditText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/codeCommerceEditText"
+        style="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeCommerceTextView" />
+
+    <TextView
+        android:id="@+id/terminalTextView"
+        style="@style/textView"
+        android:text="@string/terminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeCommerceEditText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/terminalEditText"
+        style="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terminalTextView" />
+
+    <TextView
+        android:id="@+id/amountTextView"
+        style="@style/textView"
+        android:text="@string/ammount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terminalEditText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/amountEditText"
+        style="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView" />
+
+    <TextView
+        android:id="@+id/cardTextView"
+        android:layout_width="match_parent"
+        style="@style/textView"
+        android:text="@string/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/carEditText"
+        style="@style/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/authorizationAppCompatButton"
+        style="@style/button"
+        android:text="@string/title_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

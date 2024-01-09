@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CredibanCo</string>
+    <string name="title_home">AUTORIZAR</string>
+    <string name="title_dashboard">HISTÓRICO</string>
+    <string name="annulment">ANULADA</string>
+    <string name="aproved">APROBADA</string>
+    <string name="filter">FILTRAR POR ID DE RECEPCIÓN</string>
+    <string name="commerce_code">CÓDIGO DE COMERCIO</string>
+    <string name="terminal">TERMINAL</string>
+    <string name="ammount">CANTIDAD</string>
+    <string name="card">NÚMERO DE TARJETA</string>
+</resources>

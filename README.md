@@ -1,4 +1,4 @@
-# Credibanco
+# CredibanCo
 
 ## Descripción
 
